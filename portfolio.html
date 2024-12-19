@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineer Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #2d3436;
+            --secondary-color: #0984e3;
+            --background-color: #ffffff;
+            --text-color: #2d3436;
+            --section-padding: 5rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0 10%;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 10%;
+            background-color: rgba(45, 52, 54, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        section {
+            padding: var(--section-padding) 10%;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .highlight {
+            color: var(--secondary-color);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background-color: #dfe6e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #636e72;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .project-description {
+            color: #636e72;
+            margin-bottom: 1rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tech-tag {
+            background-color: #f1f2f6;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            color: var(--primary-color);
+        }
+
+        .contact {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 0 5%;
+            }
+
+            nav {
+                padding: 1rem 5%;
+            }
+
+            section {
+                padding: var(--section-padding) 5%;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="Assets/Elijah_Resumé.pdf">Download Resumé</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <h1>Hello, I'm <span class="highlight">Elijah Bates</span></h1>
+        <p>Software Engineer specializing in web development.</p>
+    </header>
+
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <div class="project-image">Project Screenshot</div>
+                <div class="project-content">
+                    <h3 class="project-title">Project Name</h3>
+                    <p class="project-description">A brief description of the project and its key features.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">Project Screenshot</div>
+                <div class="project-content">
+                    <h3 class="project-title">Project Name</h3>
+                    <p class="project-description">A brief description of the project and its key features.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">Project Screenshot</div>
+                <div class="project-content">
+                    <h3 class="project-title">Project Name</h3>
+                    <p class="project-description">A brief description of the project and its key features.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">GraphQL</span>
+                        <span class="tech-tag">AWS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a software engineer passionate about creating efficient, scalable, and user-friendly applications. With expertise in full-stack development, I enjoy tackling complex problems and turning ideas into reality.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <p>Got some dreams you want to see realized? Feel free to reach out!</p>
+        <div class="contact-links">
+            <a href="mailto:Elijah.bitz@gmail.com">Email</a>
+            <a href="https://github.com/ElijahBitz" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/elijah-programming/" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+</body>
+</html>
